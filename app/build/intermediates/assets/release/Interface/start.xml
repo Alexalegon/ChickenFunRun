@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<nifty xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://nifty-gui.lessvoid.com/nifty-gui" xsi:schemaLocation="https://raw.githubusercontent.com/void256/nifty-gui/1.4/nifty-core/src/main/resources/nifty.xsd https://raw.githubusercontent.com/void256/nifty-gui/1.4/nifty-core/src/main/resources/nifty.xsd">
+    <useControls filename="nifty-default-controls.xml"/>
+    <useStyles filename="nifty-default-styles.xml"/>
+   <registerEffect name="shakeEffect" class="guisystem.ShakeEffect" />
+   <registerEffect name="mypulsateEffect" class="guisystem.MyPulsateEffect"/>
+   <registerEffect name="slideEffect" class="guisystem.SlideEffect"/>
+   <registerEffect name="fadeEffect" class="guisystem.FadeEffect"/>
+   <controlDefinition name="mybutton">
+       <panel
+         style="#panel">
+           <image id="greenButton" childLayout="center" filename="Interface/greenButton.png"
+           valign="center"/>
+           <text font="$font"  text="$label" color="#08ff"/>
+           
+       </panel>
+   </controlDefinition>
+   
+   <controlDefinition name="backButton">
+       <panel style="#arrowpanel"/>
+   </controlDefinition>
+   
+   <controlDefinition name="missionButton">
+       <panel style="#missionButtonStyle" >
+           <image id="background" filename="Interface/missionButtonBackground.png" width="100%" height="100%"  />
+           <panel id="" childLayout="vertical">
+           <text id="missionText" font="$font"  text="$label" color="#08ff" textHAlign="center" 
+                 wrap="true"width="70%"/>
+           <text id="progressText" font="$font" text="$progresslabel" color="#f00f" textHAlign="center"
+                 wrap="true"width="70%"/>
+           </panel>
+       </panel>
+   </controlDefinition>
+   <style id="#panel">
+       <attributes
+           
+           childLayout="center"
+           width="20%" height="10%"
+           
+           visibleToMouse="true"
+       />
+   </style>
+   
+   <style id="#arrowpanel">
+       <attributes
+           backgroundImage="Interface/arrow.png"
+           childLayout="center"
+           width="20%" height="10%"
+           visibletoMouse="true"
+       />
+   </style>
+   
+   <style id="#missionButtonStyle">
+       <attributes
+       
+       childLayout="center"
+       width="80%" height="20%"
+       
+        />
+   </style>
+   <screen id="blank" controller="guisystem.Gui">
+       <layer id="" childLayout="center" backgroundColor="#000f">
+           <panel id="" childLayout="center" width="100%" height="24%"
+           backgroundImage="Interface/darkfigLogo.png"/>
+       </layer>
+   </screen>
+   <screen id="loadScreen" controller="guisystem.Gui">
+       <layer id="" childLayout="center" backgroundColor="#900f">
+       <panel id="g" width="50%" height="15%" backgroundImage="Interface/darkfigLogo.png"/>
+       <image id="loadingText" width="0%" height="10%" filename="Interface/loadingText.png"
+       valign="bottom">
+           <effect>
+               <onHide name="fade" start="#f" end="#0"/>
+           </effect>
+       </image>
+       </layer>
+   </screen>
+   
+   <screen id="tutorialScreen" controller="tutorial.Tutorial">
+       <layer childLayout="vertical">
+           <panel childLayout="center" height="20%"/>
+           <text id="tutorialText" font="${CALL.getXLFont()}" text="hnhnhnhnhgn" align="center"/>
+           <image id="image" filename="Interface/darkfigLogo.png" width="25%" height="15%" align="center"/>
+       </layer>
+       <layer childLayout="center">
+           
+           <image id="pauseButton" filename="Interface/pauseButton.png" align="right" valign="top" width="8%" height="5%"
+                    visibletoMouse="true">
+                 <interact onClick="pause(true)"/>
+             </image>
+       </layer>
+   </screen>
+   
+    <screen id="start" controller="guisystem.Gui"> 
+        <layer id="layer" childLayout="center" visibletoMouse="true">
+            <panel id="menu" childLayout="vertical" width="100%" height="50%" valign="center" align="left">
+                <control id="missions" name="mybutton" valign="center" align="left" font="${CALL.getFont()}" label="Missions"
+                         padding="10%,0%" height="30%">
+                    <interact onClick="showPopup(missions)"/>
+                </control> 
+                <control id="settings" name="mybutton" valign="center" align="left" font="${CALL.getFont()}" label="Options"
+                padding="10%,0%" height="30%">
+                    <interact onClick="showPopup(settings)"/>
+                </control> 
+                <control id="tutorial" name="mybutton" valign="center" align="left" font="${CALL.getFont()}" label="Tutorial"
+                         padding="10%,0%" height="30%">
+                    <interact onClick="playTutorial(false)"/>
+                </control> 
+                <control id="store" name="mybutton" valign="center" align="left" font="${CALL.getFont()}" label="Store"
+                         padding="10%,0%" height="30%">
+                    <interact onClick="goToStore(home)"/>
+                </control> 
+            </panel>
+            
+            <image id="" filename="Interface/title.png" valign="top" width="80%" height="20%"></image>
+            <panel id="" childLayout="vertical" backgroundImage="Interface/longestRunBackground.png" width="20%" height="13%" 
+                   align="right" valign="center">
+                <panel id="" childLayout="center" height="55%"/>
+            <text id="distanceHighText" font="${CALL.getXLFont()}" text="4435555" valign="center" align="center"/>
+            </panel>
+            <image id="" filename="Interface/tap.png"  valign="bottom" width="35%" height="10%"visibletoMouse="true">
+                <effect>
+                    <onActive name="shakeEffect"/>
+                </effect>
+            </image>
+            <interact onClick="goToScreen()"/>
+        </layer>
+    </screen>
+    
+    <screen id="hud" controller="guisystem.Gui">
+        
+            <layer id="scoreLayer" childLayout="vertical">
+            
+            <panel id="scorePanel" childLayout="horizontal" width="50%" height="10%" align="left" valign="top">
+            
+                <panel id="bronzePanel" childLayout="center" width="30%" height="100%" align="left">
+                     <image id="bronzeIm" filename="Interface/pinataSymbol.png" align="left" height="90%" width="83%">
+                    
+                </image>
+                </panel> 
+                <panel id="bronzeTextPanel" childLayout="center" width="65%" height="90%" align="left">
+                    <text id="bronzeText" font="Interface/Fonts/FiraSansHeavy.fnt" color="#ffff" text="0" 
+                      align="left"  valign="center"/>wrap="true"
+                </panel>  
+           
+            
+            </panel>
+           
+            <panel id="chickenPanel" childLayout="horizontal" width="50%" height="10%" align="left" valign="top">
+            
+                <panel id="subChickenPanel" childLayout="center" width="20%" height="100%" align="left">
+                     <image id="silverIm" filename="Interface/chickenSymbol.png" align="left" height="90%" width="100%">
+                    
+                </image>
+                </panel>
+                <panel id="chickenTextPanel" childLayout="center" width="65%" height="90%" align="left">
+                    <text id="chickenText" font="Interface/Fonts/FiraSansHeavy.fnt" color="#ffff" text="11110" 
+                      align="left" valign="center"/>
+                </panel>
+            </panel>
+            </layer>
+           <layer id="layer" childLayout="center" >  
+               <panel id="missionAccomplishedPanel" childLayout="absolute">
+             <image id="missionAccomplished" filename="Interface/missionCompletedPopup.png" align="center" 
+                    valign="top"  x="${CALL.getMissionAx()}" y="${CALL.getMissionAY()}" width="20%" height="10%" visibletoMouse="true">
+                 <effect>
+                     <onShow name="slideEffect" length="5000"/>
+                 </effect>
+             </image>
+             <image id="distanceHigh" filename="Interface/distanceHigh.png" align="center" 
+                    valign="top"  x="${CALL.getMissionAx()}" y="${CALL.getMissionAY()}" width="20%" height="10%" visibletoMouse="true">
+                 <effect>
+                     <onShow name="slideEffect" length="5000"/>
+                 </effect>
+             </image>
+               </panel>
+               
+                
+               
+             <image id="pauseButton" filename="Interface/pauseButton.png" align="right" valign="top" width="8%" height="5%"
+                    visibletoMouse="true">
+                 <interact onClick="pause(true)"/>
+             </image>
+             <panel id="" childLayout="center" width="20%" height="20%" align="right" valign="top">
+                 <image id="distanceButton" filename="Interface/elipseBackground.png" align="right"
+                 width="50%" height="30%"/>
+                 <text id="distanceText" font="${CALL.getFont()}" color="#ffff" text="11110" 
+                      align="right" valign="center"/>
+             </panel>
+        </layer>  
+    </screen>
+    
+    <screen id="intro" controller="guisystem.Gui">
+        <layer id="layer" childLayout="center">
+            <image id="ready" filename="Interface/ready.png" width="15%" height="10%">
+                //<effect>
+                   //<onActive name="fade" start="#f" end="#0" length="10000"/>
+                //</effect> 
+            </image>
+        </layer>
+    </screen>
+    <popup id="pausePopup" childLayout="center" >
+         <panel id="menu" childLayout="vertical" width="100%" height="50%" valign="center" align="left">
+                <control id="missions" name="mybutton" valign="center" align="left" font="${CALL.getFont()}" label="Missions"
+                         padding="10%,0%" height="30%">
+                    <interact onClick="showPopup(missions)"/>
+                </control> 
+                <control id="settings" name="mybutton" valign="center" align="left" font="${CALL.getFont()}" label="Options"
+                padding="10%,0%" height="30%">
+                    <interact onClick="showPopup(settings)"/>
+                </control> 
+            </panel> 
+             <panel id="top" childLayout="center"  valign="center" width="70%" height="40%" backgroundImage="Interface/popupBackground.png">//
+                 <image id ="pauseLabel" filename="Interface/pauseLabel.png" valign="top" width="80%" height="15%"/>
+                 <image id="resume" filename="Interface/resume.png" valign="center" width="50%" height="15%"
+                 visibletoMouse="true">
+                     <interact onClick="resumePlay()"/>
+                     
+                 </image>
+                 <image id="homeButton" filename="Interface/homeIcon.png" align="center" valign="bottom" width="20%" height="20%"
+                 visibletoMouse="true">
+                     <interact onClick="goToHomeScreen(pause)"/>
+                 </image>
+                 
+             
+         </panel>
+        </popup>
+    <popup id="gameOverPopup" childLayout="center">
+        <panel id ="top" childLayout="vertical" width="70%" height="40%" backgroundImage="Interface/popupBackground.png">
+            <image id ="oops" filename="Interface/oops.png" valign="top" width="80%" height="15%" align="center"/>
+            <panel id="" childLayout="center" height="15%"/>
+            <panel id="" childLayout="vertical" visibletoMouse="true" width="35%" height="30%" align="center">
+            <image id="continueButton" filename="Interface/continue.png" align="center" valign="top" width="100%" height="50%"/>
+                 <panel id="" childLayout="horizontal" align="center">
+                 <panel id="" childLayout="center" width="40%"/>
+                 <image id="number" filename="Interface/two.png" align="center" valign="center" height="100%"/>
+                 <image id="" filename="Interface/chickenSymbol.png" height="100%" width="20%" align="center"/>
+                 </panel>
+                 <interact onClick="continueLife()"/>
+            </panel>
+            <panel id="" childLayout="center" height="15%"/>
+            <image id="home2Button" filename="Interface/homeIcon.png" align="center" valign="bottom" width="20%" height="20%"
+                 visibletoMouse="true">
+                     <interact onClick="goToHomeScreen(gameOver)"/>
+                 </image>
+            
+        </panel>
+       </popup>
+       
+       <popup id="settingsPopup" childLayout="center">
+           <panel id="top" childLayout="center" width="100%" height="100%" backgroundImage="Interface/popupBackground.png">
+               <image id="settingsLabel" width="60%" height="15%" filename="Interface/optionsLabel.png"
+               valign="top"/>
+               
+               
+               <control id="back" name="backButton" valign="bottom" align="left">
+                    <interact onClick="closePopup(settings)"/>
+                </control> 
+           </panel>
+           <panel id="optionsPanel" childLayout="vertical" width="60%" height="50%">
+               
+               <panel id="" childLayout="horizontal" height="15%" >
+               <text id="Text" font="${CALL.getXLFont()}" text="MUSIC" color="#22ff" 
+                     width="50%" valign="center"/>
+               <image id="musicAudio" filename="Interface/audioButton.png" width="15%" height="80%"
+               valign="center" align="center"  visibletoMouse="true">
+                   <interact onClick="toggleAudio(musicAudio)"/>
+                   <effect>
+                       <onShow name="mypulsateEffect" color="#0f0f" imageName="Interface/audioButton.png"/>
+                   </effect>
+                   
+               </image>
+               </panel>
+               
+               <panel id="" childLayout="horizontal" height="15%" >
+               <text id="Text" font="${CALL.getXLFont()}" text="SFX" color="#22ff" 
+                     width="50%" valign="center"/>
+               <image id="sfxAudio" filename="Interface/audioButton.png" width="15%" height="80%"
+               valign="center" align="center"  visibletoMouse="true">
+                   <interact onClick="toggleAudio(sfxAudio)"/>
+                   <effect>
+                       <onShow name="mypulsateEffect" color="#0f0f" imageName="Interface/audioButton.png"/>
+                   </effect>
+                   
+               </image>
+               </panel>
+              
+               <control id="tutorial" name="mybutton" valign="center" align="center" font="${CALL.getFont()}" label="Tutorial"
+                         padding="10%,0%" height="25%" width="40%">
+                    <interact onClick="playTutorial(true)"/>
+                </control> 
+               
+               <control id="store" name="mybutton" valign="center" align="center" font="${CALL.getFont()}" label="Store"
+                         padding="10%,0%" height="25%" width="40%">
+                    <interact onClick="goToStore(settings)"/>
+                </control> 
+                
+                <panel id="" childLayout="center" backgroundImage="Interface/darkfigLogo.png" align="center" width="40%" height="25%">
+                        <interact onClick="goToWebsite()"/>
+                </panel>
+                
+           </panel>
+       </popup>
+       
+       <popup id="missionsPopup" childLayout="center">
+           
+           <panel id="panel" childLayout="center" backgroundImage="Interface/popupBackground.png">
+              <control id="back" name="backButton" valign="bottom" align="left">
+                    <interact onClick="closePopup(missions)"/>
+                </control>  
+                
+               
+           </panel>
+           <panel id="panel2" childLayout="vertical">
+                <image id="missionsLabel" width="60%" height="15%" filename="Interface/missionsLabel.png"
+               valign="top" align="center"/>
+                <panel id="empty" childLayout="center" width="100%" height="10%"/>
+               <control id="mission1" name="missionButton" font="${CALL.getFont()}" label="Collect 10 chickens"
+               align="center" padding="10%,0%">
+               </control> 
+               <control id="mission2" name="missionButton" font="${CALL.getFont()}" label=""
+               align="center" padding="10%,0%">
+                   
+               </control>
+                   <control id="mission3" name="missionButton" font="${CALL.getFont()}" label=""
+               align="center" padding="10%,0%">
+               </control>
+           </panel>
+               
+           
+           
+          
+           
+       </popup>
+       
+       <popup id="tutorialOverPopup" childLayout="center">
+           <panel id="" childLayout="center" width="50%" height="25%"
+           backgroundImage="Interface/popupBackground.png">
+            <text id="" font="${CALL.getXLFont()}" text="TUTORIAL COMPLETE!" color="#40ff"/>
+            <image id="homeButton" filename="Interface/homeIcon.png" align="center" valign="bottom" width="35%" height="40%"
+                 visibletoMouse="true">
+                     <interact onClick="goToHomeScreen(tutorialOver)"/>
+                 </image> 
+           </panel>
+          
+       </popup>
+       <popup id="storePopup" childLayout="center">
+           <panel id="" childLayout="center" width="100%" height="100%"
+           backgroundImage="Interface/popupBackground.png">
+               
+               <control id="back" name="backButton" valign="bottom" align="left">
+                    <interact onClick="closePopup(store)"/>
+                </control>  
+           </panel>
+           
+           
+               
+             
+           <panel id="" childLayout="vertical" width="75%" height="100%"> 
+               <image id="" filename="Interface/storeLabel.png" height="15%" align="center"/>
+               <panel id="" childLayout="center" height="10%"/>
+           <panel id="" childLayout="horizontal" width="100%" height="12%" valign="top"
+                backgroundImage="Interface/storeItemBackground.png">
+               <image id="" filename="Interface/adsSymbol.png" width="10%" align="center" valign="center"/>
+               <text id="" font="${CALL.getXLFont()}" text="Remove Ads" color="#ffff" width="60%" textHAlign="left" valign="center"/>
+               <panel id="ads" backgroundImage="Interface/buyButton.png" align="center" valign="center"
+               childLayout="center" height="60%" visibletoMouse="true">
+                 <text id="" font="${CALL.getXLFont()}" text="${CALL.getPrice(ads)}" color="#f00f" width="100%" textHAlign="center" 
+                       align="center" valign="center"/>
+                 <interact onClick="buyItem(ads)"/>
+                 <effect>
+                       <onShow name="mypulsateEffect" color="#0f0f" imageName="Interface/buyButton.png"/>
+                   </effect>
+               </panel>
+           </panel>
+           
+            <panel id="" childLayout="horizontal" width="100%" height="12%" valign="top"
+                backgroundImage="Interface/storeItemBackground.png">
+               <image id="" filename="Interface/chickenSymbol.png" width="10%" height="70%" align="center" valign="center"/>
+               <text id="" font="${CALL.getXLFont()}" text="15 chickens" color="#ffff" width="60%" textHAlign="left" valign="center"/>
+               <panel id="smallpack" backgroundImage="Interface/buyButton.png" align="center" valign="center"
+               childLayout="center" height="60%" visibletoMouse="true">
+                 <text id="" font="${CALL.getXLFont()}" text="${CALL.getPrice(smallpack)}" color="#f00f" width="100%" textHAlign="center" 
+                       align="center" valign="center"/>
+                 <interact onClick="buyItem(smallpack)"/>
+                 <effect>
+                       <onShow name="mypulsateEffect" color="#0f0f" imageName="Interface/buyButton.png"/>
+                   </effect>
+               </panel>
+           </panel>
+           
+           <panel id="" childLayout="horizontal" width="100%" height="12%" valign="top"
+                backgroundImage="Interface/storeItemBackground.png">
+               <image id="" filename="Interface/chickenSymbol.png" width="10%" height="70%" align="center" valign="center"/>
+               <text id="" font="${CALL.getXLFont()}" text="100 chickens" color="#ffff" width="60%" textHAlign="left" valign="center"/>
+               <panel id="highpack" backgroundImage="Interface/buyButton.png" align="center" valign="center"
+               childLayout="center" height="60%" visibletoMouse="true">
+                 <text id="" font="${CALL.getXLFont()}" text="${CALL.getPrice(highpack)}" color="#f00f" width="100%" textHAlign="center" 
+                       align="center" valign="center"/>
+                 <interact onClick="buyItem(highpack)"/>
+                 <effect>
+                       <onShow name="mypulsateEffect" color="#0f0f" imageName="Interface/buyButton.png"/>
+                   </effect>
+               </panel>
+           </panel>
+           
+           <panel id="" childLayout="horizontal" width="100%" height="12%" valign="top"
+                backgroundImage="Interface/storeItemBackground.png">
+               <image id="" filename="Interface/chickenSymbol.png" width="10%" height="70%" align="center" valign="center"/>
+               <text id="" font="${CALL.getXLFont()}" text="10 chickens" color="#ffff" width="60%" textHAlign="left" valign="center"/>
+               <panel id="minipack" backgroundImage="Interface/buyButton.png" align="center" valign="center"
+               childLayout="center" height="60%" visibletoMouse="true">
+                   <image id="" filename="Interface/pinataSymbol.png" width="30%" height="70%"align="left"/>
+                 <text id="" font="${CALL.getXLFont()}" text="${CALL.getPrice(minipack)}" color="#ffff" width="100%" textHAlign="center" 
+                       align="center" valign="center"/>
+                 <interact onClick="buyItem(minipack)"/>
+                 <effect>
+                       <onShow name="mypulsateEffect" color="#0f0f" imageName="Interface/buyButton.png"/>
+                   </effect>
+               </panel>
+           </panel>
+           
+           </panel> 
+           
+       </popup>
+       
+       <popup id="buyChickensPopup" childLayout="center">
+            <panel id="" childLayout="center" width="75%" height="100%"> 
+             
+            <panel id="" childLayout="vertical">
+              <panel id="" childLayout="center" height="40%"/>
+           <panel id="" childLayout="horizontal" width="100%" height="12%" valign="center"
+                backgroundImage="Interface/storeItemBackground.png">
+               <image id="" filename="Interface/chickenSymbol.png" width="10%" height="70%"align="center" valign="center"/>
+               <text id="" font="${CALL.getXLFont()}" text="15 chickens" color="#ffff" width="60%" textHAlign="left" valign="center"/>
+               <panel id="smallpackGameOver" backgroundImage="Interface/buyButton.png" align="center" valign="center"
+               childLayout="center" height="60%" visibletoMouse="true">
+                 <text id="" font="${CALL.getXLFont()}" text="${CALL.getPrice(smallpackGameOver)}" color="#f00f" width="100%" textHAlign="center" 
+                       align="center" valign="center"/>
+                 <interact onClick="buyItem(smallpackGameOver)"/>
+               </panel>
+           </panel>
+           <panel id="" childLayout="center" height="5%"/>
+             <control id="back" name="backButton" valign="bottom" align="center">
+                    <interact onClick="closePopup(buyChickens)"/>
+                </control> 
+                </panel>
+           </panel> 
+       </popup>
+</nifty>

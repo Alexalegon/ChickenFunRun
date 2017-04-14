@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="nifty-style-black-1.4.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/nifty-style-black-1.4.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

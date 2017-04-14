@@ -1,0 +1,22 @@
+MaterialDef SkyBox {
+    MaterialParameters {
+        Color Color
+        TextureCubeMap Texture
+        Vector3 NormalScale
+    }
+    Technique {
+        VertexShader GLSL100:   Shaders/SkyBox.vert
+        FragmentShader GLSL100:   Shaders/SkyBox.frag
+
+        WorldParameters {
+            ViewMatrix
+            ProjectionMatrix
+            WorldMatrix
+        }
+        
+        RenderState {
+            DepthWrite Off
+            DepthFunc LessOrEqual
+        }
+    }
+}

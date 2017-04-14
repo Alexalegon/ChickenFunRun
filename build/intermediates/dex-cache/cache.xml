@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jglfont-core-1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5f997ddbcbeb144ca6b80989c2349e71add7982d">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jglfont-core-1.4_c820298a72ef14df7f0c400dcfad45693e3827e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-terrain-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="5377b0a4b900fa40457165f534e87728b5e19b78">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-terrain-3.1.0-alpha1_8ac9776a37b3ff7f8ae5a0ae7e44b686c93c2080.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\eventbus-1.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a150bec65faa814c9bddbe0249a9cc38cd0a0848">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\eventbus-1.4_64692f330a3c34749079d379a763d947f33c5424.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\nifty-default-controls-1.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="d619b794ef0b7700c9aa9bef7cdb58267780bf84">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\nifty-default-controls-1.4.1_54ff067eb110a6a8f5c2345f31b063d979d6af90.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-effects-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="47f2d350e9e5a10c0dddd4c54d67b21d2e55340f">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-effects-3.1.0-alpha1_cf2bc07899e3dc3ad68997b4f50c905137226565.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jsr305-2.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e6b534685bf6ccb65fe688c239c9e9759d0b8f1d">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jsr305-2.0.2_855de27081b437935d9f74401c3a5e2d70396b81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-bullet-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0d5c1c0596db1aa09b25c05cec04d2e1ca302d43">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-bullet-3.1.0-alpha1_caf15e5093e4f91e59d7e6a22f0e58a662cdb7e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\nifty-1.4.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a29b63916ce7cb86ff83e0e480ec024275fe8155">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\nifty-1.4.1_0eeed9995fb9f9533124ada360b5720015cb6b59.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-niftygui-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a429784fba63fb5eaaad37d41e8fcb3fda2db9b4">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-niftygui-3.1.0-alpha1_50d9c45e7769086e97550e95383ea8ea6080eab4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\ChickenFunRun.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="dccdf13065c52fd15a085e6ed4d8d1a149b8d1e1">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\ChickenFunRun_569d996cb4b89d97b0757fe6169e8c0d840736ed.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Android\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\support-v4-19.1.0_7541db917baa506c0dd564574dda219c7099e134.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-jogg-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="ed531d60fd16314bd4b0b7dc8794ace4c7c9196f">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-jogg-3.1.0-alpha1_bbd702740c67b98c322db53b1bfcb9a752872671.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-android-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="a8c767dfb3bbe9c96c21d0e3187b8b29fab2d062">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-android-3.1.0-alpha1_5977d6b68c4c9af91322a831ec1554847e784feb.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-plugins-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="e6c5694d78e8178ec50a07f99c76cc6da15e824c">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-plugins-3.1.0-alpha1_6e12306cf759c261f88984fc29da5d561702cf3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\j-ogg-all-1.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="0b53f0c15003225352ace23e89cdd3e59f814e12">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\j-ogg-all-1.0.0_325487570eb33f20a66219a83487a8c7b1caaa3c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\google-play-services.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="bb934dbae57cc6cb9fa09aa0c049f6b500ba660c">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\google-play-services_69fbefe010ab0172ba509cf7bd960705889edfd7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\libs\jme3-core-3.1.0-alpha1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.2"
+        sha1="f496410eff984146580430c5595f860ade4b4f1e">
+        <dex dex="C:\Users\Miguel Martrinez\Documents\LibGdxProjects\chickenfunrun\app\build\intermediates\pre-dexed\release\jme3-core-3.1.0-alpha1_3877c21b444bdfb40cd470a84165869b2c350b80.jar" />
+    </item>
+
+</items>

@@ -1,0 +1,19 @@
+MaterialDef MyWater {
+    MaterialParameters {
+        Color Color
+        Texture2D ColorMap
+    }
+    Technique {
+        VertexShader GLSL100:   Shaders/MyWater.vert
+        FragmentShader GLSL100:   Shaders/MyWater.frag
+
+        WorldParameters {
+            ViewMatrix
+            ProjectionMatrix
+            WorldMatrix
+            WorldViewProjectionMatrix
+            Time
+        }
+       }
+             
+}

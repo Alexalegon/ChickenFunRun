@@ -1,0 +1,24 @@
+MaterialDef Simple {
+    MaterialParameters {
+        Color Color
+        Texture2D ColorMap
+        Float ScrollSpeed
+        Float Alpha
+        Boolean Quicksand
+    }
+    Technique {
+        VertexShader GLSL100:   Shaders/MyWater.vert
+        FragmentShader GLSL100:   Shaders/MyWater.frag
+
+        WorldParameters {
+            ViewMatrix
+            ProjectionMatrix
+            WorldMatrix
+            WorldViewProjectionMatrix
+            Time
+            Tpf
+        }
+        Defines{
+            Animation_Type : Quicksand
+       }
+}

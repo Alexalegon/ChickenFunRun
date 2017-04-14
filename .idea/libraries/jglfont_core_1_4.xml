@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jglfont-core-1.4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/jglfont-core-1.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
